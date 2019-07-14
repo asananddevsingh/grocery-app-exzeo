@@ -2,7 +2,7 @@ import * as actionTypes from "../actions/actionsTypes";
 import { updateObject } from "../../utils/reducerUtil";
 
 const initialState = {
-  groceryItems: {}
+  groceryItems: []
 };
 
 const itemsReducer = (state = initialState, action) => {

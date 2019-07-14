@@ -8,11 +8,15 @@ class Grocery extends React.PureComponent {
   }
 
   render() {
-    const { upVoteCount, downVoteCount } = this.props;
+    const { upVoteCount, downVoteCount, groceryItems } = this.props;
     return (
       <WithHeader>
         <div className="Container">
-          <ItemCard upVoteCount={upVoteCount} downVoteCount={downVoteCount} />
+          <ItemCard
+            upVoteCount={upVoteCount}
+            downVoteCount={downVoteCount}
+            groceryItems={groceryItems}
+          />
         </div>
       </WithHeader>
     );

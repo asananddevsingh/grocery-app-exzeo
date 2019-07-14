@@ -5,7 +5,8 @@ import grocery from "../../components/grocery/grocery";
 const mapStateToProps = state => {
   return {
     upVoteCount: state.votes && state.votes.upVoteCount,
-    downVoteCount: state.votes && state.votes.downVoteCount
+    downVoteCount: state.votes && state.votes.downVoteCount,
+    groceryItems: state.items && state.items.groceryItems
   };
 };
 

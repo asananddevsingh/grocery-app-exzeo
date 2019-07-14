@@ -10,21 +10,23 @@ const itemCard = props => {
   };
 
   return (
-    <div className="Item">
-      <div>
-        <ItemImage
-          imagePath={
-            "https://raw.githubusercontent.com/asananddevsingh/grocery-app-exzeo/master/src/assets/items/01-sugar.jpg"
-          }
-          altText={props.itemName}
-        />
-      </div>
-      <div className="Item-Name">{props.itemName}</div>
-      <div className="Vote-Wrapper">
-        <VoteUp voteCount={props.upVoteCount} onClick={onVoteUp} />
-        <VoteDown voteCount={props.downVoteCount} />
-      </div>
-    </div>
+    <>
+      {props.groceryItems &&
+        props.groceryItems.map(item => {
+          return (
+            <div className="Item" key={item.id}>
+              <div>
+                <ItemImage imagePath={item.imagePath} altText={item.name} />
+              </div>
+              <div className="Item-Name">{item.name}</div>
+              <div className="Vote-Wrapper">
+                <VoteUp voteCount={item.upVoteCount} onClick={onVoteUp} />
+                <VoteDown voteCount={item.downVoteCount} />
+              </div>
+            </div>
+          );
+        })}
+    </>
   );
 };
 
