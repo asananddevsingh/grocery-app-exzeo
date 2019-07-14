@@ -1,0 +1,15 @@
+.Vote-Up {
+  display: flex;
+  flex-direction: column;
+}
+
+.Vote-Image {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+.Vote-Up span {
+  color: lime;
+  margin: 10px 0;
+}
