@@ -1,12 +1,22 @@
 import { connect } from "react-redux";
+import * as actions from "../../store/actions";
 import grocery from "../../components/grocery/grocery";
 
 const mapStateToProps = state => {
   return {
-    upVoteCount: state.upVoteCount,
-    downVoteCount: state.downVoteCount
+    upVoteCount: state.votes && state.votes.upVoteCount,
+    downVoteCount: state.votes && state.votes.downVoteCount
   };
 };
 
-const groceryContainer = connect(mapStateToProps)(grocery);
+const mapDispatchToProps = dispatch => {
+  return {
+    onInitGroceryItems: () => dispatch(actions.initGroceryItems())
+  };
+};
+
+const groceryContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(grocery);
 export default groceryContainer;

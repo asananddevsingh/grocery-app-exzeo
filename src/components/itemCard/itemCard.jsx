@@ -13,7 +13,9 @@ const itemCard = props => {
     <div className="Item">
       <div>
         <ItemImage
-          imagePath={"../../assets/items/01-sugar.jpg"}
+          imagePath={
+            "https://raw.githubusercontent.com/asananddevsingh/grocery-app-exzeo/master/src/assets/items/01-sugar.jpg"
+          }
           altText={props.itemName}
         />
       </div>

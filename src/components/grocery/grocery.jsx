@@ -2,17 +2,21 @@ import React from "react";
 import ItemCard from "../itemCard/itemCard";
 import WithHeader from "../../hoc/withHeader/withHeader";
 
-const grocery = props => {
-  return (
-    <WithHeader>
-      <div className="Container">
-        <ItemCard
-          upVoteCount={props.upVoteCount}
-          downVoteCount={props.downVoteCount}
-        />
-      </div>
-    </WithHeader>
-  );
-};
+class Grocery extends React.PureComponent {
+  componentDidMount() {
+    this.props.onInitGroceryItems();
+  }
 
-export default grocery;
+  render() {
+    const { upVoteCount, downVoteCount } = this.props;
+    return (
+      <WithHeader>
+        <div className="Container">
+          <ItemCard upVoteCount={upVoteCount} downVoteCount={downVoteCount} />
+        </div>
+      </WithHeader>
+    );
+  }
+}
+
+export default Grocery;
