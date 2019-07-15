@@ -1,8 +1,12 @@
 import React from "react";
 import logoIcon from "../../assets/icons/logo.svg";
-
 import "./header.css";
 
+/**
+ * @description - Header component.
+ *
+ * @param {*} props - Component props
+ */
 const header = () => {
   return (
     <>

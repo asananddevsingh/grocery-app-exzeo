@@ -4,6 +4,11 @@ import ItemImage from "../itemImage/itemImage";
 import VoteUp from "../voteUp/voteUp";
 import VoteDown from "../voteDown/voteDown";
 
+/**
+ * @description - Component that creates the list of items.
+ *
+ * @param {*} props - Component props
+ */
 const itemCard = props => {
   return (
     <>

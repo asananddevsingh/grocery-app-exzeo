@@ -16,6 +16,9 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
+/**
+ * @description - Pure container for Grocery component that holds the dispaching props and store value props.
+ */
 const groceryContainer = connect(
   mapStateToProps,
   mapDispatchToProps

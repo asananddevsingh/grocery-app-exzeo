@@ -2,6 +2,11 @@ import React from "react";
 import voteUpIcon from "../../assets/icons/vote-up.png";
 import "./voteUp.css";
 
+/**
+ * @description - Vote up component
+ *
+ * @param {*} props - Component props
+ */
 const voteUp = props => {
   return (
     <div className="Vote-Up">

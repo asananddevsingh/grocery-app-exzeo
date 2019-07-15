@@ -1,6 +1,7 @@
 import * as actionTypes from "./actionsTypes";
 import axios from "../../utils/axiosUtil";
 
+/**========================= GROCERY ITEMS =========================*/
 const setGroceryItems = groceryItems => {
   return {
     type: actionTypes.FETCH_GROCERY_ITEMS_SUCCESS,
@@ -14,6 +15,11 @@ const fetchGroceryItemsFail = () => {
   };
 };
 
+/**
+ * @description - Method to get list of the grocery items.
+ *
+ * @param {*} orderData - Request data for API.
+ */
 export const initGroceryItems = () => {
   return dispatch => {
     axios
@@ -27,7 +33,7 @@ export const initGroceryItems = () => {
   };
 };
 
-// Vote Up
+/**========================= VOTE UP =========================*/
 const voteUpSuccess = data => {
   return {
     type: actionTypes.VOTE_DOWN_ITEM_SUCCESS,
@@ -44,6 +50,11 @@ const voteUpFail = error => {
   };
 };
 
+/**
+ * @description - Method to update the vote up.
+ *
+ * @param {*} orderData - Request data for API.
+ */
 export const voteUpItem = orderData => {
   const putUrl = "/groceryItems/item" + orderData.id + ".json";
   const postData = {
@@ -62,7 +73,7 @@ export const voteUpItem = orderData => {
   };
 };
 
-// Vote Down
+/**========================= VOTE DOWN =========================*/
 const voteDownSuccess = data => {
   return {
     type: actionTypes.VOTE_DOWN_ITEM_SUCCESS,
@@ -79,6 +90,11 @@ const voteDownFail = error => {
   };
 };
 
+/**
+ * @description - Method to update the vote down.
+ *
+ * @param {*} orderData - Request data for API.
+ */
 export const voteDownItem = orderData => {
   const putUrl = "/groceryItems/item" + orderData.id + ".json";
   const postData = {
