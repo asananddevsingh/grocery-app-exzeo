@@ -18,27 +18,25 @@ Consider that there is a node service which serves you endpoint for list of prod
 
 ## How to run this project
 
-- Step 1:
+- Step 1: Download the zipped code from [here](https://github.com/asananddevsingh/grocery-app-exzeo/archive/master.zip).
 
-- Step 2:
+- Step 2: Un-Zip the code to any directory. Open the "grocery-app-exzeo" folder as a react project in any of front-end editor such as visual studio code.
 
-- Step 3:
+- Step 3: Open the project ternimal, move to the root folder i.e. "grocery-app-exzeo" and run the command `npm install`. It will install all the project dependencies. (Node and npm must have to be installed to use this app)
 
-- Step 4:
+- Step 4: After installing all the dependencies. `npm start` runs the app in the development mode.
+  Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Available Scripts
+## APIs used
 
-In the project directory, you can run:
+I'm using Google's free web application development [platform](https://firebase.google.com/).
 
-### `npm start`
+- `GET`: `https://react-my-burger-0414.firebaseio.com/groceryItems.json`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- `PUT`: `https://react-my-burger-0414.firebaseio.com/groceryItems/item{itemId}.json`
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Jest testing framework along with enyme is used to unit test the app.
+
+I've written very basic test cases for only two of the files "grocery.jsx" and "header.jsx".
