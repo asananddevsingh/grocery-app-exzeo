@@ -16,6 +16,18 @@ Consider that there is a node service which serves you endpoint for list of prod
 
 - Use Redux in your code
 
+## Technology stack used
+
+- react: `16.8.6`
+
+- react-redux: `7.1.0`
+
+- redux: `4.0.4`
+
+- redux-thunk: `2.3.0`
+
+- enzyme: `3.10.0`
+
 ## How to run this project
 
 - Step 1: Download the zipped code from [here](https://github.com/asananddevsingh/grocery-app-exzeo/archive/master.zip).
