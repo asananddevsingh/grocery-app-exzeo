@@ -5,10 +5,6 @@ import VoteUp from "../voteUp/voteUp";
 import VoteDown from "../voteDown/voteDown";
 
 const itemCard = props => {
-  const onVoteUp = () => {
-    alert(1);
-  };
-
   return (
     <>
       {props.groceryItems &&
@@ -20,8 +16,17 @@ const itemCard = props => {
               </div>
               <div className="Item-Name">{item.name}</div>
               <div className="Vote-Wrapper">
-                <VoteUp voteCount={item.upVoteCount} onClick={onVoteUp} />
-                <VoteDown voteCount={item.downVoteCount} />
+                <VoteUp
+                  voteCount={item.upVoteCount}
+                  onClick={() => props.onVoteUp(item)}
+                />
+                <VoteDown
+                  voteCount={item.downVoteCount}
+                  onClick={() => props.onVoteDown(item)}
+                />
+              </div>
+              <div className="Vote-Result">
+                Result: <strong>{item.upVoteCount - item.downVoteCount}</strong>
               </div>
             </div>
           );

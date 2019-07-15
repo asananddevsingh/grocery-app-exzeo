@@ -11,6 +11,7 @@ const voteUp = props => {
         alt="Vote Up"
         onClick={props.onClick}
       />
+      <span className="Vote-Text">Vote Up</span>
       <span>{props.voteCount}</span>
     </div>
   );

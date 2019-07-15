@@ -11,6 +11,26 @@ const itemsReducer = (state = initialState, action) => {
       return updateObject(state, {
         groceryItems: action.groceryItems
       });
+    case actionTypes.VOTE_UP_ITEM_SUCCESS:
+      return updateObject(state, {
+        loading: action.loading,
+        groceryItems: {
+          ...state.groceryItems,
+          ["item" + action.updatedItem.id]: {
+            ...action.updatedItem
+          }
+        }
+      });
+    case actionTypes.VOTE_DOWN_ITEM_SUCCESS:
+      return updateObject(state, {
+        loading: action.loading,
+        groceryItems: {
+          ...state.groceryItems,
+          ["item" + action.updatedItem.id]: {
+            ...action.updatedItem
+          }
+        }
+      });
     default:
       return state;
   }

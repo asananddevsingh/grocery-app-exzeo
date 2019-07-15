@@ -4,15 +4,15 @@ import grocery from "../../components/grocery/grocery";
 
 const mapStateToProps = state => {
   return {
-    upVoteCount: state.votes && state.votes.upVoteCount,
-    downVoteCount: state.votes && state.votes.downVoteCount,
     groceryItems: state.items && state.items.groceryItems
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onInitGroceryItems: () => dispatch(actions.initGroceryItems())
+    onInitGroceryItems: () => dispatch(actions.initGroceryItems()),
+    onVoteUpItem: data => dispatch(actions.voteUpItem(data)),
+    onVoteDownItem: data => dispatch(actions.voteDownItem(data))
   };
 };
 

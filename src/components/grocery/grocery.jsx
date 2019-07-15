@@ -7,17 +7,24 @@ class Grocery extends React.PureComponent {
     this.props.onInitGroceryItems();
   }
 
+  voteUpHandler = itemData => {
+    this.props.onVoteUpItem(itemData);
+  };
+
+  voteDownHandler = itemData => {
+    this.props.onVoteDownItem(itemData);
+  };
+
   render() {
-    const { upVoteCount, downVoteCount, groceryItems } = this.props;
+    const { groceryItems } = this.props;
+    const formattedItems = Object.values(groceryItems);
     return (
       <WithHeader>
-        <div className="Container">
-          <ItemCard
-            upVoteCount={upVoteCount}
-            downVoteCount={downVoteCount}
-            groceryItems={groceryItems}
-          />
-        </div>
+        <ItemCard
+          onVoteUp={this.voteUpHandler}
+          onVoteDown={this.voteDownHandler}
+          groceryItems={formattedItems}
+        />
       </WithHeader>
     );
   }

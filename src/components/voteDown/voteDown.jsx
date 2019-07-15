@@ -9,8 +9,9 @@ const voteDown = props => {
         className="Vote-Image"
         src={voteDownIcon}
         alt="Vote Down"
-        onclick={props.onClick}
+        onClick={props.onClick}
       />
+      <span className="Vote-Text">Vote Down</span>
       <span>{props.voteCount}</span>
     </div>
   );

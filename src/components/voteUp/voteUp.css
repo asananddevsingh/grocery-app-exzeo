@@ -7,9 +7,14 @@
   cursor: pointer;
   height: 40px;
   width: 40px;
+  align-self: center;
+}
+
+.Vote-Up span.Vote-Text {
+  color: #ffffff;
 }
 
 .Vote-Up span {
   color: lime;
-  margin: 10px 0;
+  margin: 5px 0;
 }

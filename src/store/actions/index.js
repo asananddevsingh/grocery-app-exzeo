@@ -1,1 +1,1 @@
-export { initGroceryItems } from "./itemsActions";
+export { initGroceryItems, voteUpItem, voteDownItem } from "./itemsActions";

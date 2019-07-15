@@ -23,3 +23,10 @@
   display: flex;
   justify-content: space-around;
 }
+
+.Vote-Result {
+  color: #fff;
+  padding: 10px 0;
+  border: 1px solid #fff;
+  margin: 5px 0;
+}

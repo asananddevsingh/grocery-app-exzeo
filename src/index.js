@@ -7,11 +7,11 @@ import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 
-import votesReducer from "./store/reducers/votesReducer";
+// import votesReducer from "./store/reducers/votesReducer";
 import itemsReducer from "./store/reducers/itemsReducer";
 
 const rootReducer = combineReducers({
-  votes: votesReducer,
+  // votes: votesReducer,
   items: itemsReducer
 });
 
